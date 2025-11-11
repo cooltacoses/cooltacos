@@ -1627,7 +1627,13 @@
             // Scroll to section title - different offset for mobile vs desktop
             setTimeout(() => {
                 const activeTab = document.getElementById(tabName);
-                const sectionTitle = activeTab.querySelector('.section-title');
+                // Try to find section-title or personalizacion-title
+                let sectionTitle = activeTab.querySelector('.section-title');
+                
+                // For "Personaliza tu Taco" section, use personalizacion-title
+                if (!sectionTitle && tabName === 'personaliza') {
+                    sectionTitle = activeTab.querySelector('.personalizacion-title');
+                }
                 
                 if (sectionTitle) {
                     const isMobile = window.innerWidth <= 768;
