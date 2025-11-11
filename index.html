@@ -1624,18 +1624,25 @@
             // Add active class to clicked button
             event.target.classList.add('active');
 
-            // Scroll to the navigation tabs (top of menu content)
-            const navTabs = document.querySelector('.nav-tabs');
-            if (navTabs) {
-                const offset = 20; // Small offset from top
-                const elementPosition = navTabs.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - offset;
+            // Scroll to section title - different offset for mobile vs desktop
+            setTimeout(() => {
+                const activeTab = document.getElementById(tabName);
+                const sectionTitle = activeTab.querySelector('.section-title');
+                
+                if (sectionTitle) {
+                    const isMobile = window.innerWidth <= 768;
+                    // Mobile needs more offset to account for smaller screens
+                    const offset = isMobile ? 10 : 20;
+                    
+                    const elementPosition = sectionTitle.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100); // Small delay to ensure tab content is rendered
         }
 
         // Scroll to top function
