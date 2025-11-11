@@ -283,6 +283,22 @@
             text-align: left;
         }
 
+        .item-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 12px;
+            border: 2px solid rgba(139, 195, 74, 0.3);
+            flex-shrink: 0;
+        }
+
+        .item-name-with-icon {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+
         .item-price {
             color: #8BC34A;
             font-weight: 600;
@@ -388,8 +404,8 @@
         }
 
         .talla-image {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             background: #012022;
             display: flex;
@@ -398,13 +414,14 @@
             margin: 0 auto 20px;
             border: 3px solid rgba(139, 195, 74, 0.3);
             overflow: hidden;
-            padding: 10px;
+            padding: 5px;
         }
 
         .talla-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         .talla-name {
@@ -439,7 +456,7 @@
             flex-direction: column;
             align-items: center;
             transition: all 0.3s ease;
-            width: 140px;
+            width: 160px;
         }
 
         .ingrediente-item:hover {
@@ -447,8 +464,8 @@
         }
 
         .ingrediente-circle {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             background: #2a2a2a;
             display: flex;
@@ -458,7 +475,7 @@
             border: 3px solid rgba(139, 195, 74, 0.3);
             transition: all 0.3s ease;
             overflow: hidden;
-            padding: 10px;
+            padding: 5px;
         }
 
         .ingrediente-item:hover .ingrediente-circle {
@@ -467,9 +484,10 @@
         }
 
         .ingrediente-circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
         }
 
         .ingrediente-name {
@@ -518,6 +536,14 @@
             border-radius: 15px;
         }
 
+        .banner-desktop {
+            display: block;
+        }
+
+        .banner-mobile {
+            display: none;
+        }
+
         .menu-option {
             background: linear-gradient(135deg, #8BC34A, #689F38);
             padding: 20px;
@@ -531,6 +557,66 @@
             font-size: 1.3rem;
             font-weight: 600;
             color: #ffffff;
+        }
+
+        /* Cool Kids Options Style */
+        .kids-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .kids-option-card {
+            background: linear-gradient(135deg, #8BC34A, #689F38);
+            padding: 15px 30px;
+            border-radius: 15px;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(139, 195, 74, 0.3);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .kids-option-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(139, 195, 74, 0.5);
+            border-color: #ffffff;
+        }
+
+        .kids-section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #8BC34A;
+            text-align: center;
+            margin: 25px 0 15px 0;
+        }
+
+        .kids-includes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .kids-include-item {
+            background: rgba(139, 195, 74, 0.15);
+            padding: 12px 25px;
+            border-radius: 12px;
+            color: #8BC34A;
+            font-size: 1.1rem;
+            font-weight: 500;
+            border: 2px solid rgba(139, 195, 74, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .kids-include-item:hover {
+            background: rgba(139, 195, 74, 0.25);
+            border-color: #8BC34A;
         }
 
         /* Contact Section */
@@ -671,7 +757,17 @@
             }
 
             .ingrediente-item {
+                width: 140px;
+            }
+
+            .ingrediente-circle {
+                width: 130px;
+                height: 130px;
+            }
+
+            .ingrediente-circle img {
                 width: 120px;
+                height: 120px;
             }
 
             .ingrediente-circle {
@@ -714,6 +810,14 @@
                 height: 300px;
             }
 
+            .banner-desktop {
+                display: none;
+            }
+
+            .banner-mobile {
+                display: block;
+            }
+
             .talla-name {
                 font-size: 2rem;
             }
@@ -732,6 +836,20 @@
 
             .contact-text {
                 font-size: 1rem;
+            }
+
+            .kids-option-card {
+                padding: 12px 20px;
+                font-size: 1.1rem;
+            }
+
+            .kids-include-item {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            .kids-section-title {
+                font-size: 1.2rem;
             }
         }
 
@@ -770,7 +888,17 @@
             }
 
             .ingrediente-item {
-                width: 100px;
+                width: 120px;
+            }
+
+            .ingrediente-circle {
+                width: 115px;
+                height: 115px;
+            }
+
+            .ingrediente-circle img {
+                width: 105px;
+                height: 105px;
             }
 
             .ingrediente-circle {
@@ -819,8 +947,13 @@
             }
 
             .talla-image {
-                width: 80px;
-                height: 80px;
+                width: 120px;
+                height: 120px;
+            }
+
+            .talla-image img {
+                width: 110px;
+                height: 110px;
             }
 
             .paso-header {
@@ -840,6 +973,22 @@
 
             .contact-text {
                 font-size: 0.95rem;
+            }
+
+            .kids-option-card {
+                padding: 10px 18px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 200px;
+            }
+
+            .kids-include-item {
+                padding: 8px 16px;
+                font-size: 0.95rem;
+            }
+
+            .kids-section-title {
+                font-size: 1.1rem;
             }
         }
 
@@ -861,7 +1010,17 @@
             }
 
             .ingrediente-item {
+                width: 100px;
+            }
+
+            .ingrediente-circle {
+                width: 100px;
+                height: 100px;
+            }
+
+            .ingrediente-circle img {
                 width: 90px;
+                height: 90px;
             }
         }
     </style>
@@ -871,7 +1030,7 @@
         <div class="container">
             <div class="logo">
                 <div class="logo-circle">
-                    <div class="logo-text">CIB</div>
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczP4OeLcshqBU3kpcEo6RdvM-JIMqwN5rgWOz-fpJQZgeLEVFFk7AIIGsfzNUSWvapJUC1SvJaiVMnpjIhYmDuXhV-1F-E8O78FN6F-Uwt8bCjyxWkZliQ4yfJjhVLGXe-j4dSfCR3qji_piuHlGKyg=w770-h744-s-no-gm?authuser=0" alt="Cool Tacos CIB Logo" style="width: 100px; height: 100px; object-fit: contain;">
                 </div>
                 <h1 class="restaurant-name">Cool Tacos CIB</h1>
                 <p class="restaurant-subtitle">Original Taco Français</p>
@@ -885,6 +1044,7 @@
         <div class="nav-tabs">
             <button class="nav-tab active" onclick="showTab('personaliza')">Personaliza tu Taco</button>
             <button class="nav-tab" onclick="showTab('entrantes')">Entrantes</button>
+            <button class="nav-tab" onclick="showTab('patatas')">Patatas</button>
             <button class="nav-tab" onclick="showTab('hamburguesas')">Hamburguesas</button>
             <button class="nav-tab" onclick="showTab('otros')">Box & Bocadillos</button>
             <button class="nav-tab" onclick="showTab('bebidas')">Bebidas & Postres</button>
@@ -906,7 +1066,7 @@
                     <div class="tallas-grid">
                         <div class="talla-card">
                             <div class="talla-image">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Taco XL">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczMcovcyoTfTdX3lxhtUglav21BFbKpWnaQhgbIPSIAIzMgj0c-Rq8pSWelEa-0tnzkUJTIWlAj-kG8Rq1r1MzwxtwwaBRwhjLsnJddmG9aTs1azt3B6CqCT6D_VFNHoC7IEkO_96twz5BW6_3fFt9s=w869-h869-s-no-gm?authuser=0" alt="Taco XL">
                             </div>
                             <div class="talla-name">XL</div>
                             <div class="talla-description">Triple carne</div>
@@ -914,7 +1074,7 @@
                         </div>
                         <div class="talla-card">
                             <div class="talla-image">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Taco L">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPHCvSM88qJsta6perEkiZ8vQ7hQNG4BOzErUgZS0nS3q0awyY30TLQn9uchyx7U8qV00E_1opig1DUggT7BdbHYJk2U_d9_oVyoa5MlOeycQEOZksCUoFtjsdcoNdtoGuEc4dAwcvn2TktH8XD01Y=w869-h869-s-no-gm?authuser=0" alt="Taco L">
                             </div>
                             <div class="talla-name">L</div>
                             <div class="talla-description">Doble carne</div>
@@ -922,7 +1082,7 @@
                         </div>
                         <div class="talla-card">
                             <div class="talla-image">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Taco M">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczMF89AEO-t7IlatPIE5-VTqEP6YmWQdHkhuEHfshh0QZfiz3_94w1uzktFETCJH4qOSX7h4AzGnavcbqBhIPr828stB88uxZRaSWayjbLty_Ypu_PlTHb81oJj8ojXitWRUAEPI9XJejRc6DFlkvzo=w869-h869-s-no-gm?authuser=0" alt="Taco M">
                             </div>
                             <div class="talla-name">M</div>
                             <div class="talla-description">Carne simple</div>
@@ -938,61 +1098,61 @@
                     <div class="ingredientes-grid">
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Argelina">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczMgq3-QbirVZVwsgpnXKQPysJtFfcj8VA6DO3xnJoSaQD95tODdmle55FAGzSBFntiQ0SEuIus7UQDl6POGUp4nNcw7lRdbSBDLD7giOmz7bYP1fBGLas5vvv6vzBMgXsx2EJb1_kpECP4gDTySTi0=w869-h869-s-no-gm?authuser=0" alt="Argelina">
                             </div>
                             <div class="ingrediente-name">Argelina</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Biggy">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczNeQ4FJidHKpMFuyJrFJGpGmrcR4mOVqSWx-30mi6x1Gj0qLEvODfb20UvYLXvTYii9pdcodDSL5zVsxyeMWbYP5w1T6b7_drH4z0mxumURVsEa7clsOKJ1d-2F2Z7Jlv-G_4pX7n7FdqAXc8apwXE=w869-h869-s-no-gm?authuser=0" alt="Biggy">
                             </div>
                             <div class="ingrediente-name">Biggy</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Andaluza">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczP6VG6vBhGZdhjyVGIGGMFg19LmdpHhdtetTaRIXhVaIDddZizf3lQlun0jcQXnaquBwdM6b7enpvfsFIGbPtQfVYlP1FD6amfWKM2r_AwLnOjUNf_TB-ICQsWmQK4KAXlnl4x1velazi1sd_IQ7D0=w869-h869-s-no-gm?authuser=0" alt="Andaluza">
                             </div>
                             <div class="ingrediente-name">Andaluza</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Brasil">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczNamy_NvWeV2WgNchWMxHedPJeWj3hBkYjJDMucWnYcueDuQJpnwJpCVOJ0k4YKXastVtJpRXQD2twPwinMX-trP4xw2sQVg34MZJuAXmsHo6N90kR3jSIICyAC0BIClqmz9wI3pASg5DEdhqbpL0Q=w869-h869-s-no-gm?authuser=0" alt="Brasil">
                             </div>
                             <div class="ingrediente-name">Brasil</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Chili Thai">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPS23e75dn0lWga0AY8Sxu5WV1UkedFb1jYnxIxdTrQFZBdTlNXva-HMEAsM8dJkBugiLcA64JdXX9Tr2lg7s5o4ZzIC9zpdzh-x_tTlDxz9HFgPzESLZ7dh6TRQJZZj1oDYqi3Sx42KmheSn9xUYU=w869-h869-s-no-gm?authuser=0" alt="Chili Thai">
                             </div>
                             <div class="ingrediente-name">Chili Thai</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Barbacoa">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczMkoVl3ytEaPirRD7IHPnLDiN32XC7lETXriVfs8arsCfkXlixZkW8Z2kHSjU9RryDZd1K7IXBQlfQDCoMYuq5pMniqJy6UfeXD9FXGiiGrO6Siu6UbVvaj5DdvYv-BUb7Rv8pyvbe0ffOEzxOOSLs=w869-h869-s-no-gm?authuser=0" alt="Barbacoa">
                             </div>
                             <div class="ingrediente-name">Barbacoa</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Samurai">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczMk0AoimUQ3TS9njfGnkc-P0woSl35a0wlhQ_PlAuw656-x3owADGDQcUoMwJuHJurW9tqPGMetTEKC0CpJf7ZqPH7EmPIu9CbbrYHror4I3DPgNy4ZXEzTB1enA9z_CHQ4Uc2e7SiLZsJIN51GFac=w869-h869-s-no-gm?authuser=0" alt="Samurai">
                             </div>
                             <div class="ingrediente-name">Samurai</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Ketchup">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPqhGFZ_qjCNsUJlfkvw-jjI-t6-wBRm499ySC6JeVw2Z9P6U_w_29zmfcp0PsIsb5DcCmdYwy8Yo7jzLPMdZHFKhzUfV5TW4-K0aiX1LLeRyI9eAAqk0Fc6feddPG4l25HBig1pbEkq18tq72R9A0=w869-h869-s-no-gm?authuser=0" alt="Ketchup">
                             </div>
                             <div class="ingrediente-name">Ketchup</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Curry">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczMzsqeYhw3Aaom6P1geXVV96QfvDjRVwdDT7gV8zkC8w36ZoxyV3wqrWajKyecBe5fWWih2icuzsgta9Xq6BYK7H9j9w5aFOGtCmAYUTx3tHKQFeC487WKCgZWFF-ErtYcYWl38mjBuvoBGWQFHXLc=w869-h869-s-no-gm?authuser=0" alt="Curry">
                             </div>
                             <div class="ingrediente-name">Curry</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Mayo">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczNH6n-RV-N03KyFr6GDPzTFQEbCpqOA14WvxXhp13HraF1lghtMHbRIBgF2bxuCG5HWTER7jCANmIL0aSQmd2WRY_9rq7jpRhe2oAyNAsZ3nSvOm5sEx-MAgyPEihVWqQaK9MNXgH6A-BXctzurIi8=w869-h869-s-no-gm?authuser=0" alt="Mayo">
                             </div>
                             <div class="ingrediente-name">Mayo</div>
                         </div>
@@ -1009,31 +1169,31 @@
                     <div class="ingredientes-grid">
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Ternera Picada">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczMTmLDDaiOA5ow0RAI78WtyRk_lD0I_Bo50tb7y6RnD37MOXTKUB9W1trzt3pLsPW_Pd2WyI67tQgzfbYF89b3gKZWxKUTG3oWcv8c_WENrr-nrnnrEx-Ps6RfpZZMuYblLicjvEcdDRSjTACGArJA=w869-h869-s-no-gm?authuser=0" alt="Ternera Picada">
                             </div>
                             <div class="ingrediente-name">Ternera Picada</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Pechuga de Pollo">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczO8SRLCNwWpClCLdWcDRGD_RZ2273zSk_pIvW2tQHtb23lGG5Cv2AxQhjh88PEhuPFTjgnU9x3hBgrCbxAdAhn2JWRPGMFdL2b94Rzgfs6NDSVx4q9hrDnpo9ut5d8CTMZLpy1RQW_moJXY__3LUgQ=w869-h869-s-no-gm?authuser=0" alt="Pechuga de Pollo">
                             </div>
                             <div class="ingrediente-name">Pechuga de Pollo</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Cordon Bleu">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPnUC_iAhXit5ok1ep6sV4C3mwnIqAn2-OU9mHmXlwG0U0kegmQtrSHWVwohu-wkY1KE0yKrtP1ockYWULsPpR9gqJEvZgVifhQU0p6Xh1--szOGlKNoxi1OiIGMsWJau9M3hOjLdxysxyeIpLTC0c=w869-h869-s-no-gm?authuser=0" alt="Cordon Bleu">
                             </div>
                             <div class="ingrediente-name">Cordon Bleu</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Tenders">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczN6cmMlsTYTIlHsZ4FDVL2Q1oMKaeeT7_Nzladiz_EkVrlNJpbxCWCIdZn3eS2EapHKQE8VFbl1txJViGb1JUJvqkfZ0H7kDYvcXDmUZ0h7rGXk-ofYpdQDqtbBXlnvXSJq7Zw0J0Bl1S2wV_WiP4M=w869-h869-s-no-gm?authuser=0" alt="Tenders">
                             </div>
                             <div class="ingrediente-name">Tenders</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Nuggets">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczOHi61Oad2dMvN_ZC7zDM6yW34_j9O_374xLPeyogYAaT4de1bjB2qqL4Q86zh1vM214Ezhcjiqd-ysuwScbBy_Z4MP_WKvEfYKNIYkFW5hzFAvn_Td-oy_Y282talxcP3YIPskH1FdL6XFWO5_xkE=w869-h869-s-no-gm?authuser=0" alt="Nuggets">
                             </div>
                             <div class="ingrediente-name">Nuggets</div>
                         </div>
@@ -1051,25 +1211,25 @@
                     <div class="ingredientes-grid">
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Cheddar">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPizw07rNrZiqEuWlyf0J3LVevkjMog2KoQHhpDJdqg5rYmyyigOGBFhUsiK4szJde4xno3efaoVlDFw3lBXHpOtHFT1oKz-1XaUtRZ82EuiuaaW19SrBYHdb0Pd1LKcLqSmHVD0gW6h1XrCcYCqi0=w869-h869-s-no-gm?authuser=0" alt="Cheddar">
                             </div>
                             <div class="ingrediente-name">Cheddar</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="La Vaca Que Ríe">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczO3qvSJQMsrkVa0NO1tjcjkHNtTOV1zBfapmyvevIIxumZ3ltQGngg7-C75kc5f0g9JJt5Hrv-QCUCmHftw4MtfTXcnvy_1GcObz4-UhI9KZkCk0zHeS-SndO-XqrGgyO0zlX1H9ydMXFUPvlNHkZM=w869-h869-s-no-gm?authuser=0" alt="La Vaca Que Ríe">
                             </div>
                             <div class="ingrediente-name">La Vaca Que Ríe</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Emmental">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPlxJCmddngOOF-i8A0BWNanaBGXGzADfR3WQR8liDHXjYXkRgThvDmcLQi0_IK0g20IrfTTDWW1uVahcagTCA97UpwIGRJ-eE-HyiNz88FPmGLvrP-fGlRaAxtQCEeTifm63KLgjhlf5Ox9qf472E=w869-h869-s-no-gm?authuser=0" alt="Emmental">
                             </div>
                             <div class="ingrediente-name">Emmental</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Cebolla Crispy">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPxHF_FKkaWVGzNZwM6zkPLSn1P9OtobxtC4jKPfAhVqojSqxRf2CQhyjvAtmrNBz_6_P-H1XLvPTXHQeDhb9rD9pnE27PqmNOOIKliM_HyX8N8B1ix6qD_Ce0VxKNmtHWCMQ7cHb31Pvv4PxEdld0=w869-h869-s-no-gm?authuser=0" alt="Cebolla Crispy">
                             </div>
                             <div class="ingrediente-name">Cebolla Crispy</div>
                         </div>
@@ -1079,31 +1239,31 @@
                     <div class="ingredientes-grid">
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Boursin">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczMFIRnZ_pMztK_ssWgGUVxt86rJCjyA0Xc-6yBb64VBi-WBxLWV-QkFiErA6jegwTMf6Asdyjto4Gga1u54GX_Vx3uHoVXa5mFTpc_7p826KOiYKVifkZxCkGHHdLGdEZLjB_mxIS3-S38bNJ8W46w=w860-h573-s-no-gm?authuser=0" alt="Boursin">
                             </div>
                             <div class="ingrediente-name">Boursin</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Cabra">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczNYTR93ZpIJFlQobvMQZeFSfzAqbKw21Vod1tiBjqAElosEspUaaFpBLkHIj1tYw521fSAollM0des1C7ZAxd8q4tDo21tMdlTjj51RUnVUvVYEHk4gSVfC_iwPKLYVPTMdewNF5BL3P1EJjepF_BI=w869-h869-s-no-gm?authuser=0" alt="Cabra">
                             </div>
                             <div class="ingrediente-name">Cabra</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Mozzarella">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczOTkwRT5W9U69plA0pzNzo41rxja2QudFQszGt08iFfy5tpMa_dXucc4AIZEgkOTQQ5GD5z9v2LTtrmf7mdotGe-__xETrq88rLkGW8YFnxXf1H09ci83QKTxynkZMULkcOWEXpWl_Tr-kRZ3ANlNk=w869-h869-s-no-gm?authuser=0" alt="Mozzarella">
                             </div>
                             <div class="ingrediente-name">Mozzarella</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Huevo">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczOAyo-PlskzQKfiNZtw6Y_OPmpT9BYRGIdQigbyFffNC6tV64ul3e05IGH_qs-B1Ob-55GL6IwmtrCjyZWOU8ZsdgcQxx2CdfO2jkQu28tclgHoVoziG8_WI1eegGX3JWvtihAOQm86cr4pYrxdw2g=w869-h869-s-no-gm?authuser=0" alt="Huevo">
                             </div>
                             <div class="ingrediente-name">Huevo</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Cebolla Caramelizada">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczNg73n0qtutbvYzKOf9idA6jPajCG0mLSJd0l8EpVaDLuFwzrM2sBiZ0ZRy7QdObbgGT4JAOQ48LIZm7Mqt98-C2YWtwCOctL4XjyV-ALc72y03kLP2waa05s-Gl_f39Twom_lIz0ARGSRMpY48yRA=w869-h869-s-no-gm?authuser=0" alt="Cebolla Caramelizada">
                             </div>
                             <div class="ingrediente-name">Cebolla Caramelizada</div>
                         </div>
@@ -1121,31 +1281,31 @@
                     <div class="ingredientes-grid">
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Cheddar">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPizw07rNrZiqEuWlyf0J3LVevkjMog2KoQHhpDJdqg5rYmyyigOGBFhUsiK4szJde4xno3efaoVlDFw3lBXHpOtHFT1oKz-1XaUtRZ82EuiuaaW19SrBYHdb0Pd1LKcLqSmHVD0gW6h1XrCcYCqi0=w869-h869-s-no-gm?authuser=0" alt="Cheddar">
                             </div>
                             <div class="ingrediente-name">Cheddar</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Cabra Miel">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczNYTR93ZpIJFlQobvMQZeFSfzAqbKw21Vod1tiBjqAElosEspUaaFpBLkHIj1tYw521fSAollM0des1C7ZAxd8q4tDo21tMdlTjj51RUnVUvVYEHk4gSVfC_iwPKLYVPTMdewNF5BL3P1EJjepF_BI=w869-h869-s-no-gm?authuser=0" alt="Cabra Miel">
                             </div>
                             <div class="ingrediente-name">Cabra Miel</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Emmental">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPlxJCmddngOOF-i8A0BWNanaBGXGzADfR3WQR8liDHXjYXkRgThvDmcLQi0_IK0g20IrfTTDWW1uVahcagTCA97UpwIGRJ-eE-HyiNz88FPmGLvrP-fGlRaAxtQCEeTifm63KLgjhlf5Ox9qf472E=w869-h869-s-no-gm?authuser=0" alt="Emmental">
                             </div>
                             <div class="ingrediente-name">Emmental</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Mozzarella">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczOTkwRT5W9U69plA0pzNzo41rxja2QudFQszGt08iFfy5tpMa_dXucc4AIZEgkOTQQ5GD5z9v2LTtrmf7mdotGe-__xETrq88rLkGW8YFnxXf1H09ci83QKTxynkZMULkcOWEXpWl_Tr-kRZ3ANlNk=w869-h869-s-no-gm?authuser=0" alt="Mozzarella">
                             </div>
                             <div class="ingrediente-name">Mozzarella</div>
                         </div>
                         <div class="ingrediente-item">
                             <div class="ingrediente-circle">
-                                <img src="https://png.pngtree.com/png-vector/20241105/ourmid/pngtree-thick-and-rich-tomato-ketchup-png-image_14285778.png" alt="Emmental Lardon">
+                                <img src="https://lh3.googleusercontent.com/pw/AP1GczPsjacGQ8SiERXcmSXlG9I3sIago3j-tst5kzQyUaF0LpgUDFn3h6LT_fEOVgPXtvgzd8F97St9zfoMVznhLipGajsYW10oIDJOp4FH2oMiLOE5vhD8TawawhbNQx4bCR9BeWeYMvlGFGa4H14UcvU=w869-h869-s-no-gm?authuser=0" alt="Emmental Lardon">
                             </div>
                             <div class="ingrediente-name">Emmental Lardon</div>
                         </div>
@@ -1161,23 +1321,47 @@
 
         <!-- Entrantes Tab -->
         <div id="entrantes" class="tab-content">
-            <div class="tab-banner" style="background-image: url('https://images.unsplash.com/photo-1619221882399-01e6d60d6576?w=1080&h=400&fit=crop');"></div>
+            <div class="tab-banner banner-desktop" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNPLtuqVcu38gPRrIQgRQwBtjbmTeD2eRfiPQeFLDHTwQirsGZHxhehS8cVHtjgmqv5aXdNJytLe3UdUad1z2xw_AUagz1s5aCHkYagtAbnIwO6WGrq8jtJwtKPyujK8lKh_D_dmAuW0qOGHbuQSBc=w1080-h400-s-no-gm?authuser=0');"></div>
+            <div class="tab-banner banner-mobile" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNeE0NNvp5RQhH0os4GkyHkEFnLhEACsohsj70HMpqGCuPijELq_k2Ll0n3I7Gswrcj6InsGmjPTGzCnV6HQiQHwQE7mEN2zVO1Z-CN-3OnB8g_2JcLz0qbYn5R2eY8ysPecEz8OzIfhMmmjR4kXc8=w492-h400-s-no-gm?authuser=0');"></div>
             <h2 class="section-title">Entrantes</h2>
             <div class="menu-grid">
                 <div class="menu-item">
-                    <div class="item-name">Camembert <span class="item-price">3,00€</span></div>
+                    <div class="item-name">
+                        <div class="item-name-with-icon">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczNPLtuqVcu38gPRrIQgRQwBtjbmTeD2eRfiPQeFLDHTwQirsGZHxhehS8cVHtjgmqv5aXdNJytLe3UdUad1z2xw_AUagz1s5aCHkYagtAbnIwO6WGrq8jtJwtKPyujK8lKh_D_dmAuW0qOGHbuQSBc=w1080-h400-s-no-gm?authuser=0" alt="Camembert" class="item-icon">
+                            Camembert
+                        </div>
+                        <span class="item-price">3,00€</span>
+                    </div>
                     <div class="item-description">5 unidades</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Mozza Sticks <span class="item-price">3,00€</span></div>
+                    <div class="item-name">
+                        <div class="item-name-with-icon">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczNv3EcVuHrml0LL8RYJw_F8HJ6nrlunVa-SmpUVfGCLwysy4-jvXspVkzmJmB9tF-HHFL5pWhC0VfEnuOYdP87NcvfNahFhLnG3xeUkraFVEV_DH9hmP0_m5_2hMqCY_bpYviZXVtGCZvBGoqYWuaA=w869-h869-s-no-gm?authuser=0" alt="Mozza Sticks" class="item-icon">
+                            Mozza Sticks
+                        </div>
+                        <span class="item-price">3,00€</span>
+                    </div>
                     <div class="item-description">5 unidades</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Onion Rings <span class="item-price">3,00€</span></div>
+                    <div class="item-name">
+                        <div class="item-name-with-icon">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczOAVU4rn87OSZ_es9GWBWbEO2kbjIrMAc7_BspgpO9YkKsevqNfvx2Mhin70PkHQNe_UEISLt7FR5ZmJJj4Akf98SD8tSvRYZwj21uMkcJ4GA4KN4GBkREDAv6P_f5PL1NOWms_olhMrhCSDWk2960=w869-h869-s-no-gm?authuser=0" alt="Onion Rings" class="item-icon">
+                            Onion Rings
+                        </div>
+                        <span class="item-price">3,00€</span>
+                    </div>
                     <div class="item-description">7 unidades</div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Tenders</div>
+                    <div class="item-name">
+                        <div class="item-name-with-icon">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczN6cmMlsTYTIlHsZ4FDVL2Q1oMKaeeT7_Nzladiz_EkVrlNJpbxCWCIdZn3eS2EapHKQE8VFbl1txJViGb1JUJvqkfZ0H7kDYvcXDmUZ0h7rGXk-ofYpdQDqtbBXlnvXSJq7Zw0J0Bl1S2wV_WiP4M=w869-h869-s-no-gm?authuser=0" alt="Tenders" class="item-icon">
+                            Tenders
+                        </div>
+                    </div>
                     <div class="item-subitems">
                         <div class="subitem"><span>3 unidades</span><span class="item-price">4,00€</span></div>
                         <div class="subitem"><span>5 unidades</span><span class="item-price">6,50€</span></div>
@@ -1185,15 +1369,25 @@
                     </div>
                 </div>
                 <div class="menu-item">
-                    <div class="item-name">Nuggets</div>
+                    <div class="item-name">
+                        <div class="item-name-with-icon">
+                            <img src="https://lh3.googleusercontent.com/pw/AP1GczOHi61Oad2dMvN_ZC7zDM6yW34_j9O_374xLPeyogYAaT4de1bjB2qqL4Q86zh1vM214Ezhcjiqd-ysuwScbBy_Z4MP_WKvEfYKNIYkFW5hzFAvn_Td-oy_Y282talxcP3YIPskH1FdL6XFWO5_xkE=w869-h869-s-no-gm?authuser=0" alt="Nuggets" class="item-icon">
+                            Nuggets
+                        </div>
+                    </div>
                     <div class="item-subitems">
                         <div class="subitem"><span>5 unidades</span><span class="item-price">3,00€</span></div>
                         <div class="subitem"><span>7 unidades</span><span class="item-price">5,00€</span></div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <h2 class="section-title" style="margin-top: 40px;">Patatas</h2>
+        <!-- Patatas Tab -->
+        <div id="patatas" class="tab-content">
+            <div class="tab-banner banner-desktop" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczN_5HqUAf4PCXarwBk319iruaq78TqtPojdazJ235NI4o1XkndkBb0yYcnpjS54UJsO4Ltnab_L6PN7920jN08gOHA0b5UrJO3gGiVeAP4IGPE8eshdrr7OB9Sgm-0vUNlkqlVgy4hnHYCvKl4d4Jw=w1080-h400-s-no-gm?authuser=0');"></div>
+            <div class="tab-banner banner-mobile" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczN00RSboqTWkaiiY7L5gj8VMjzKJVELG5wNosxt7aWZN5qZUeX4T9SzsSdaOmNxrKQpgDUPAoSV46ySuy_RCx2NAOkGIRSvqAj8jljjmzItS3PqMmQttALzWkuf0WWYzwSCt92poOc_ZYvWb5_QlVw=w492-h400-s-no-gm?authuser=0');"></div>
+            <h2 class="section-title">Patatas</h2>
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="item-name">Pequeñas <span class="item-price">2,00€</span></div>
@@ -1206,23 +1400,12 @@
                     <div class="item-description">Salsa cheddar / Bacon / Salsa Fromagère casera / Lardon</div>
                 </div>
             </div>
-
-            <h2 class="section-title" style="margin-top: 40px;">Box & Bocadillos</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-name">Box <span class="item-price">8,50€</span></div>
-                    <div class="item-description">Carne a elegir, Patatas fritas, Salsa a elegir, Salsa Fromagère casera</div>
-                </div>
-                <div class="menu-item">
-                    <div class="item-name">Bocadillos <span class="item-price">8,50€</span></div>
-                    <div class="item-description">Ternera / Pollo, Base: lechuga, tomate, cebolla, salsa a elegir y cheddar</div>
-                </div>
-            </div>
         </div>
 
         <!-- Hamburguesas Tab -->
         <div id="hamburguesas" class="tab-content">
-            <div class="tab-banner" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1080&h=400&fit=crop');"></div>
+            <div class="tab-banner banner-desktop" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPaczVxSLxqm7O5wFBzk7KsMfHBnP_LhSO4QlciQRE3HWkWRzgTFHctJdduxTs3oFNnT1i-6u7Jf16AtrHec_1SA1LUrmlJclOzZCQeWSO9KC6sgHX84ZL6ojhYCdKjjWURUEWfIJ9tswEL3SVSjBI=w1080-h400-s-no-gm?authuser=0');"></div>
+            <div class="tab-banner banner-mobile" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNBUPyrFtEuqsQtDLtuDTZKDczc2gADPS8MRIGr58S5FhJ19bgfWtuH_cvDj-p8DPq4v8knT08Nz5zSJvGVR5LSZwAY-qnRPkqI2b2IQ8HD2y1kOtYYiN4VAuJ0wWlpYFdd4wv1z8JtK6bi8lOi3M4=w492-h400-s-no-gm?authuser=0');"></div>
             <h2 class="section-title">Hamburguesas</h2>
             <div class="menu-grid">
                 <div class="menu-item">
@@ -1254,7 +1437,8 @@
 
         <!-- Otros Tab -->
         <div id="otros" class="tab-content">
-            <div class="tab-banner" style="background-image: url('https://images.unsplash.com/photo-1509722747041-616f39b57569?w=1080&h=400&fit=crop');"></div>
+            <div class="tab-banner banner-desktop" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNax1GVS1hoqo2ZIhd0juNQ0PzBENvbboLTbMPH8PwEBkeq0KZUP1u9MUPniDvkgUah0TZQFqTY9kZgYft70x3_aYwKc83N3ibb6rTtBvZvDDRienfxwb7uRwduLd819NOZb7RtSm420DA6__lH6n0=w1080-h400-s-no-gm?authuser=0');"></div>
+            <div class="tab-banner banner-mobile" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczOSycxn55MgiDr679uT8AG3lSL-WlDDFthP8L76i11VnO3Hi3iPJGvAaQpKuz7alDbclnI81_9iZNrYWbJZOB-kHNYuqV-qvT-nft-QOs3_IzcfTXs9DPzX6kn9YYJHrC97mqXLi-zNUowhkJu_Wp0=w492-h400-s-no-gm?authuser=0');"></div>
             <h2 class="section-title">Box & Bocadillos</h2>
             <div class="menu-grid">
                 <div class="menu-item">
@@ -1270,7 +1454,8 @@
 
         <!-- Bebidas Tab -->
         <div id="bebidas" class="tab-content">
-            <div class="tab-banner" style="background-image: url('https://images.unsplash.com/photo-1546173159-315724a31696?w=1080&h=400&fit=crop');"></div>
+            <div class="tab-banner banner-desktop" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPXz_Vv5oRhtcCbxsb7WuoQF25ZFgc3EUIiFcmjpQdgPdGdFr3ZfbW2uuL5rZrXP8qSkI_uVoxJaAV0wScdgZ64BnmBuXRet9Rjeslc7vSWY2af5FbgCu3H-sHI11LJMrlOzbC0UjWu9s-x06784Xc=w1080-h400-s-no-gm?authuser=0');"></div>
+            <div class="tab-banner banner-mobile" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczMb5OITwAe7pCGkwFOkdoiifqJ-xRijCi6i9kM5J_tDak39V7A6ZzGxtf9v9FqqekmZGCv8SWOYUv1HwUFNdtp-6f38ufSA4mQlcuwvzZ-ToMfSZ92Rbjp8UDmN8VpVf7TnVtwFhkzaTwcpsQ-H6Xo=w492-h400-s-no-gm?authuser=0');"></div>
             <h2 class="section-title">Bebidas</h2>
             <div class="menu-grid">
                 <div class="menu-item">
@@ -1292,22 +1477,27 @@
 
         <!-- Cool Kids Tab -->
         <div id="kids" class="tab-content">
-            <div class="tab-banner" style="background-image: url('https://images.unsplash.com/photo-1562159278-1253a58da141?w=1080&h=400&fit=crop');"></div>
+            <div class="tab-banner banner-desktop" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczN2pA4khxGU_CWrBcLnNcLoKmTL7j2KIwc9eaMRZ62gbTVmmed279xciJ6XwkQhQipNW4I7sMcEqvPMjmsfjbe2uKVJPcabZx6qAhgQuuzk2dcCPYrkl3AvEASGQs8_VYiO7kSW-RIhSGLai7boV5k=w1080-h400-s-no-gm?authuser=0');"></div>
+            <div class="tab-banner banner-mobile" style="background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPDwMdqSgz3tu7cw1AkD6wNuSzAbmD3YHaCHBmx62es8X-qQ0-6L2t3wWb0i_p3cckiZ2aZL1katu7QFfqmOLET7vq8-3oqCCfdC1qhh1vFX8_yQm-7dU5gfykpFU0769Rtq25CodAcBo5gWQy7Q2M=w492-h400-s-no-gm?authuser=0');"></div>
             <h2 class="section-title">Cool Kids</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-name">Menú Cool Kids <span class="item-price">6,50€</span></div>
-                    <div class="item-description">
-                        <strong>Elige:</strong><br>
-                        • Taco S<br>
-                        • Cheese Burger<br>
-                        • 5 Nuggets<br><br>
-                        <strong>+</strong><br>
-                        • Patatas fritas<br>
-                        • Capri Sun<br>
-                        • Juguete
-                    </div>
-                </div>
+            
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 2rem; font-weight: 700; color: #8BC34A; margin-bottom: 10px;">6,50€</div>
+                <div style="font-size: 1.2rem; color: #cccccc;">Menú completo para niños</div>
+            </div>
+
+            <div class="kids-section-title">🍽️ Elige tu plato principal:</div>
+            <div class="kids-options">
+                <div class="kids-option-card">🌮 Taco S</div>
+                <div class="kids-option-card">🍔 Cheese Burger</div>
+                <div class="kids-option-card">🍗 5 Nuggets</div>
+            </div>
+
+            <div class="kids-section-title">➕ Incluye:</div>
+            <div class="kids-includes">
+                <div class="kids-include-item">🍟 Patatas fritas</div>
+                <div class="kids-include-item">🧃 Capri Sun</div>
+                <div class="kids-include-item">🎁 Juguete</div>
             </div>
         </div>
 
